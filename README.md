@@ -1,31 +1,6 @@
-# Session Management Skills - Curated Collection
+# Cognitive Modes + Session Skills
 
-**⚠️ CURATED COLLECTION - DO NOT SYNC ALL GLOBAL SKILLS HERE**
-
-This directory contains a curated collection of skills for session management and orchestration visibility. These skills are intended for public sharing.
-
-## Purpose
-
-- Public sharing of session management skills
-- Lightweight collection for specific use cases
-- Independent from global skills library
-
-## Included Skills
-
-### Session Orchestration
-- **showcase-export** - Capture orchestration in new sessions
-- **session-reconstruct** - Analyze old sessions retroactively
-
-### Cognitive Enhancement
-- **cognitive-modes** - Meta-skill that maps cognitive mode-switch words to appropriate thinking skills
-
----
-
-# Showcase Skill
-
-**Make your AI agent orchestration visible for YC, investors, and demos.**
-
-When you build with AI agents (Claude Code, Cursor, etc.), most of the orchestration happens invisibly—skills inject silently, subagents work in the background, decisions are made without explanation. This skill makes all of that **visible** in your session transcript.
+**Three powerful skills for AI-assisted thinking and session orchestration.**
 
 ## Installation
 
@@ -33,38 +8,174 @@ When you build with AI agents (Claude Code, Cursor, etc.), most of the orchestra
 npx skills add sunnypatneedi/skills
 ```
 
-## Quick Reference
+---
 
-| When | Flag | Accuracy | Command |
-|------|------|----------|---------|
-| **Before** session | `--showcase` | 95% | `"Build my-project --showcase"` |
-| **After** session | `--reconstruct` | 60-80% | `"Reconstruct from session.md --reconstruct"` |
+## 🧠 Cognitive Modes
+
+**Transform how Claude thinks by using mode-switch words.**
+
+Instead of saying "think about this," use specific cognitive trigger words that activate different thinking patterns:
+
+### Quick Start
+
+Just use these words naturally in your prompts:
+
+```bash
+# Depth & Rigor
+"Let's think about this rigorously"
+"Approach this from first-principles"
+"What's the load-bearing assumption?"
+
+# Creative Reframing
+"Let's reimagine this problem"
+"What's the contrarian take?"
+"How could we invert this?"
+
+# Precision & Math
+"What are the probabilities here?"
+"Give me order of magnitude estimates"
+"What's the sensitivity analysis?"
+
+# Tradeoffs
+"What must we sacrifice?"
+"What's the binding constraint?"
+"Name the opportunity cost"
+
+# Quality
+"Make this elegant and idiomatic"
+"Show me the canonical approach"
+"What's production-grade here?"
+```
+
+### How It Works
+
+When you use these words, Claude automatically:
+1. **Recognizes the cognitive mode** you're requesting
+2. **Activates specialized thinking skills** (rigorous-thinking, ideacritic, etc.)
+3. **Adapts its reasoning style** to match your intent
+
+### Full Trigger Word Reference
+
+| Mode | Trigger Words | What You Get |
+|------|---------------|--------------|
+| **Depth & Rigor** | rigorous, first-principles, mechanistic, axiomatic, steelman, ultra think hard | Proof-like thinking, causal chains, no hand-waving |
+| **Creative Reframing** | reimagine, orthogonal, contrarian, subversive, invert, zero-based | Break mental models, perpendicular thinking |
+| **Precision & Math** | probabilities, bounded, monotonic, order of magnitude, sensitivity analysis | Statistical reasoning, calibrated estimates |
+| **Tradeoff & Decision** | sacrifice, irreversible, binding constraint, pareto, opportunity cost | Explicit tradeoffs, identify bottlenecks |
+| **Quality** | elegant, idiomatic, canonical, production-grade, battle-tested, composable | Clean, tasteful, maintainable solutions |
+| **Systems** | emergent, cascading, equilibrium, feedback loop, entropy | Systems-level thinking |
+| **Epistemic** | Bayesian, calibrated, crux, pre-mortem, adversarial, steel-thread | Reasoning about uncertainty |
+
+### Examples in Practice
+
+**Before (generic):**
+> "Help me validate this startup idea"
+
+**After (cognitive mode):**
+> "Let's think about this **rigorously** — what's the **load-bearing** assumption? Give me **probabilities** not certainties, and what's the **contrarian** take?"
+
+This triggers:
+- ✅ rigorous-thinking skill (proof-like analysis)
+- ✅ Focused on critical assumptions
+- ✅ Statistical reasoning mode
+- ✅ ideacritic skill (contrarian perspectives)
 
 ---
 
-## Usage
+## 📊 Session Orchestration Skills
 
-### `--showcase` — For New Sessions (Recommended)
+**Make your AI agent orchestration visible for demos, YC applications, and investor meetings.**
 
-Use at the **start** of a session to capture full orchestration details as they happen.
+### showcase-export
 
+Capture **what skills triggered, what decisions were made, and why** — at 95% accuracy.
+
+**Usage:**
 ```bash
-# Start your session with --showcase
-"Build my-startup-idea --showcase"
+# Start session with showcase mode
+"Build my-project --showcase"
 
-# Work normally... Claude narrates all orchestration
+# Work normally... Claude narrates orchestration
 
-# When done, export using built-in command
+# Export when done
 /export session.md
 ```
 
-**What gets captured:**
-- Skill logic (what each skill instructed Claude to do)
+**Captures:**
+- Skill logic (exact instructions each skill gave Claude)
 - Subagent reasoning (reconstructed internal process)
 - Decision rationale (tradeoffs considered)
-- Compound learning (semantic meaning of patterns)
+- Compound learning (semantic patterns discovered)
 
-**Example output with `--showcase`:**
+### session-reconstruct
+
+**Retroactively** analyze old sessions you didn't showcase — at ~70% accuracy.
+
+**Usage:**
+```bash
+# Reconstruct from existing export
+"Reconstruct orchestration from old-session.md --reconstruct"
+
+# Or analyze current session
+"Export and reconstruct this session --reconstruct"
+```
+
+**Infers:**
+- Skill invocations (from output patterns)
+- Agent reasoning (from results)
+- Decision points (from choices made)
+- Compound learning (from behavior changes)
+
+---
+
+## Skills Included
+
+| Skill | Purpose | How to Use |
+|-------|---------|------------|
+| **cognitive-modes** | Activate specialized thinking modes | Use trigger words: "rigorous", "reimagine", "probabilities", etc. |
+| **showcase-export** | Capture orchestration in new sessions | Add `--showcase` flag when starting |
+| **session-reconstruct** | Analyze old sessions retroactively | Add `--reconstruct` flag to exports |
+
+---
+
+## Use Cases
+
+**Cognitive Modes:**
+- Strategic thinking for startup decisions
+- Technical architecture discussions
+- Code review requiring taste and rigor
+- Problem-solving that needs reframing
+- Design decisions with tradeoffs
+
+**Session Skills:**
+- YC applications (show agent orchestration mastery)
+- Investor demos (technical depth + decision-making)
+- Team knowledge sharing (how complex sessions work)
+- Learning (understand AI agent coordination)
+
+---
+
+## Detailed Documentation
+
+### Showcase Mode
+
+<details>
+<summary>Click to expand full showcase documentation</summary>
+
+**When to use:** Starting a new project you might demo later
+
+```bash
+# 1. Start with showcase
+"Build my-saas-idea --showcase"
+
+# 2. Work through project
+# Claude narrates: skills activated, decisions made, agents spawned
+
+# 3. Export
+/export yc-showcase-session.md
+```
+
+**Example output:**
 
 ```markdown
 ## 🔧 Skill Activated: idea-validator
@@ -73,8 +184,6 @@ Use at the **start** of a session to capture full orchestration details as they 
 1. Analyze problem clarity using the "would I pay for this" test
 2. Check market need via revealed demand signals
 3. Assess competitive moat using idea maze framework
-
-**I will now execute these instructions...**
 
 ### 📋 Decision Point: Architecture Approach
 
@@ -87,177 +196,120 @@ Use at the **start** of a session to capture full orchestration details as they 
 **Rationale:** Ship fast, validate, refactor later if needed
 ```
 
----
+</details>
 
-### `--reconstruct` — For Old Sessions (Fallback)
+### Reconstruct Mode
 
-Use **after** a session to retroactively infer orchestration from an existing export.
+<details>
+<summary>Click to expand full reconstruct documentation</summary>
+
+**When to use:** Old session you forgot to showcase
 
 ```bash
-# Option 1: Current session (export + reconstruct in one step)
-"Export and reconstruct this session --reconstruct"
-
-# Option 2: Already-exported file
+# Reconstruct from file
 "Reconstruct orchestration from old-session.md --reconstruct"
+
+# Also available:
+"Analyze this session --audit"  # With confidence scores
+"Walk me through what happened --replay"  # Step-by-step
+"Show reconstruction diff --diff"  # Original vs annotated
 ```
 
-> **Note:** `/export --reconstruct` won't work because `/export` is a built-in command that doesn't accept flags. Use the natural language commands above instead.
-
-**Also available:**
-```bash
-# Full reconstruction with confidence scores
-"Analyze this session --audit"
-
-# Step-by-step walkthrough
-"Walk me through what happened --replay"
-
-# Compare original vs annotated
-"Show reconstruction diff --diff"
-```
-
-**What gets reconstructed:**
-- Skill invocations (inferred from output patterns)
-- Agent reasoning (inferred from results)
-- Decision points (inferred from choices made)
-- Compound learning (inferred from behavior changes)
-
-**Example output with `--reconstruct`:**
+**Example output:**
 
 ```markdown
 [RECONSTRUCTED SKILL LOGIC]
 Skill: idea-validator
-Based on the output pattern, this skill likely instructed:
+Based on output pattern, likely instructed:
 1. Problem clarity analysis (evidence: "clear problem" in output)
 2. Market need validation (evidence: reference to "demand signals")
 Confidence: 85%
 
 [RECONSTRUCTED DECISION]
-At this point, the session chose monolith over microservices.
-Likely tradeoffs considered:
-- Monolith advantage: Faster to ship, simpler debugging
+Session chose monolith over microservices.
+Likely tradeoffs:
+- Monolith advantage: Faster to ship
 - Microservices advantage: Better scaling
-- Why monolith won: Early stage, need to validate first
+- Why monolith won: Early stage
 Confidence: 70%
 ```
 
----
+</details>
 
-## When to Use What
+### Cognitive Modes Deep Dive
 
-| Scenario | Use | Why |
-|----------|-----|-----|
-| Starting a new project for YC demo | `--showcase` | Captures everything at 95% accuracy |
-| Building something you might want to share later | `--showcase` | Better to capture than reconstruct |
-| Old session you forgot to showcase | `--reconstruct` | Infers what happened (~70% accuracy) |
-| Session with partial showcase coverage | `--reconstruct` | Fills in gaps |
-| Quick prototype, no demo needed | Neither | Just work normally |
+<details>
+<summary>Click to expand full cognitive modes reference</summary>
 
----
+#### Depth & Rigor Triggers
 
-## Complete Workflow Examples
+| Word | Thinking Mode | Auto-Invokes |
+|------|---------------|--------------|
+| **Rigorous** | Proof-like thinking — every step must earn its place | `rigorous-thinking` |
+| **First-principles** | Derive from ground truth, strip borrowed reasoning | `rigorous-thinking` |
+| **Mechanistic** | Demand causal chains: "A causes B because..." | `rigorous-thinking` |
+| **Steelman** | Construct strongest possible version of opposing view | `rigorous-exchange` |
+| **Load-bearing** | Identify the single assumption everything depends on | `rigorous-thinking` |
+| **Ultra think hard** | Maximum cognitive effort, no shortcuts anywhere | `rigorous-thinking` |
 
-### Example 1: YC Application Session
+#### Creative Reframing Triggers
 
-```bash
-# 1. Start with showcase mode
-"Build my-saas-idea --showcase"
+| Word | Thinking Mode | Auto-Invokes |
+|------|---------------|--------------|
+| **Reimagine** | Break fixed mental models — clean-slate vision | `ideacritic` |
+| **Orthogonal** | Think perpendicular to the current frame | `ideacritic` |
+| **Contrarian** | Deliberate inversion of the popular view | `ideacritic` |
+| **Invert** | "How to guarantee failure" instead of "how to succeed" | `inversion-analysis` |
+| **Zero-based** | If you had none of this, what would you build? | `ideacritic` |
 
-# 2. Work through your project
-# Claude narrates: skills activated, decisions made, agents spawned
+#### Precision & Mathematical Triggers
 
-# 3. Before finishing, ask for summary
-"Prepare for export"
+| Word | Thinking Mode | Auto-Invokes |
+|------|---------------|--------------|
+| **Probabilities** | Full statistical reasoning — likelihoods not certainties | `claim-validator` |
+| **Bounded** | Force upper and lower limits on assertions | `claim-validator` |
+| **Order of magnitude** | Calibration without false precision | `unit-economics-validator` |
+| **Sensitivity analysis** | Which variable, if wrong by 2x, breaks conclusion? | `unit-economics-validator` |
 
-# 4. Export using built-in command
-/export yc-showcase-session.md
+#### Tradeoff & Decision Triggers
 
-# 5. Submit to YC
-# Your export now shows full orchestration mastery
-```
+| Word | Thinking Mode | Auto-Invokes |
+|------|---------------|--------------|
+| **Sacrifice** | Make tradeoffs explicit — name what you're willing to lose | `operator-playbook` |
+| **Irreversible** | One-way vs two-way doors | `operator-playbook` |
+| **Binding constraint** | Identify the single bottleneck | `systems-decompose` |
+| **Pareto** | Find 80/20 leverage points | `operator-playbook` |
 
-### Example 2: Retroactive Analysis
+#### Quality Triggers
 
-```bash
-# 1. You have an old session export
-# (exported earlier without --showcase)
+| Word | Thinking Mode | Auto-Invokes |
+|------|---------------|--------------|
+| **Elegant** | Minimize complexity while maximizing power | `deslop` |
+| **Idiomatic** | Follow language/framework conventions | `code-review` |
+| **Production-grade** | Battle-tested, handles edge cases | `security-review` |
+| **Composable** | Small pieces that combine well | `refactor` |
 
-# 2. Reconstruct what happened
-"Reconstruct orchestration from old-session.md --reconstruct"
-
-# 3. Review the annotated version
-# Look for [RECONSTRUCTED] and [GAP] markers
-
-# 4. Fill specific gaps if needed
-"What decisions were made in the architecture phase? --audit"
-```
-
-### Example 3: Partial Coverage
-
-```bash
-# 1. Started without --showcase, realized mid-session
-"Enable showcase mode now"
-
-# 2. Finish the session (new parts are captured)
-/export partial-session.md
-
-# 3. Reconstruct the early parts
-"Reconstruct orchestration for the parts before showcase was enabled --reconstruct"
-```
+</details>
 
 ---
 
-## What Gets Captured vs Reconstructed
+## Comparison Table
 
-| Element | With `--showcase` | With `--reconstruct` |
-|---------|-------------------|----------------------|
-| Skill logic | ✅ Exact instructions | 🔶 Inferred from outputs |
-| Agent reasoning | ✅ Narrated process | 🔶 Inferred from results |
-| Decision tradeoffs | ✅ Explicit options | 🔶 Inferred from choices |
-| Compound learning | ✅ Semantic meaning | 🔶 Inferred from patterns |
-| Timing | ✅ Can be included | ❌ Cannot reconstruct |
-| Tool call counts | ✅ Can be included | 🔶 Estimates only |
-
-Legend: ✅ Full capture | 🔶 Partial inference | ❌ Cannot recover
-
----
-
-## Reconstruction Confidence Markers
-
-When using `--reconstruct`, outputs include confidence markers:
-
-| Marker | Meaning |
-|--------|---------|
-| `[RECONSTRUCTED]` | Inferred, not captured (60-90% confidence) |
-| `[VERIFIED]` | Explicitly present in transcript |
-| `[UNCERTAIN]` | Low confidence inference (<50%) |
-| `[GAP]` | Cannot reconstruct this element |
-
----
-
-## Skills Included
-
-| Skill | Purpose | Flags |
-|-------|---------|-------|
-| `showcase-export` | Capture orchestration in new sessions | `--showcase` |
-| `session-reconstruct` | Analyze old sessions retroactively | `--reconstruct`, `--audit`, `--replay`, `--diff` |
-
----
-
-## Use Cases
-
-- **YC Applications**: Show "cracked agent wrangler" skills
-- **Investor Demos**: Demonstrate technical depth and decision-making
-- **Team Knowledge Sharing**: Show how complex sessions were orchestrated
-- **Learning**: Understand how AI agents coordinate skills and subagents
-- **Documentation**: Create detailed records of AI-assisted work
+| Scenario | Use cognitive-modes | Use showcase | Use reconstruct |
+|----------|---------------------|--------------|-----------------|
+| Strategic startup decision | ✅ "Let's think **rigorously**" | ❌ | ❌ |
+| Building demo for YC | ✅ "Make this **elegant**" | ✅ `--showcase` | ❌ |
+| Review old work session | ❌ | ❌ | ✅ `--reconstruct` |
+| Architecture tradeoffs | ✅ "What's the **binding constraint**?" | ✅ `--showcase` | ❌ |
+| Quick prototype | ❌ (unless you want quality) | ❌ | ❌ |
 
 ---
 
 ## Works With
 
-- Claude Code
-- Cursor
-- Any agent that supports the Vercel Skills format
+- **Claude Code** (Anthropic)
+- **Cursor** (Anysphere)
+- Any agent supporting Vercel Skills format
 
 ## Related
 
@@ -267,3 +319,9 @@ When using `--reconstruct`, outputs include confidence markers:
 ## License
 
 MIT
+
+---
+
+## Maintenance Note
+
+⚠️ **This is a curated collection** — not all global skills are synced here. For the full library, see the main skills repository.
