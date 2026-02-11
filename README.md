@@ -1,3 +1,26 @@
+# Session Management Skills - Curated Collection
+
+**⚠️ CURATED COLLECTION - DO NOT SYNC ALL GLOBAL SKILLS HERE**
+
+This directory contains a curated collection of skills for session management and orchestration visibility. These skills are intended for public sharing.
+
+## Purpose
+
+- Public sharing of session management skills
+- Lightweight collection for specific use cases
+- Independent from global skills library
+
+## Included Skills
+
+### Session Orchestration
+- **showcase-export** - Capture orchestration in new sessions
+- **session-reconstruct** - Analyze old sessions retroactively
+
+### Cognitive Enhancement
+- **cognitive-modes** - Meta-skill that maps cognitive mode-switch words to appropriate thinking skills
+
+---
+
 # Showcase Skill
 
 **Make your AI agent orchestration visible for YC, investors, and demos.**

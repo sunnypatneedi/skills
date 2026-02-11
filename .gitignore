@@ -1,0 +1,16 @@
+# Protect curated session management skills collection
+# Only track explicitly listed skills below
+
+# Ignore everything by default
+*
+!.gitignore
+!README.md
+
+# Explicitly include curated skills for sharing
+!session-reconstruct/
+!showcase-export/
+!cognitive-modes/
+
+# Track all files within these directories
+!*/
+!*/**
