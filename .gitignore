@@ -14,3 +14,8 @@
 # Track all files within these directories
 !*/
 !*/**
+
+# Guides and GitHub metadata
+!guides/
+!.github/
+!.github/FUNDING.yml

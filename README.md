@@ -305,6 +305,12 @@ Confidence: 70%
 
 ---
 
+## Guides
+
+- [Setting Up GitHub Sponsors](guides/github-sponsors-setup.md) — How to add the "Sponsor this project" button and structure your sponsors profile
+
+---
+
 ## Works With
 
 - **Claude Code** (Anthropic)
