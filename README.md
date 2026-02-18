@@ -1,4 +1,4 @@
-# Cognitive Modes + Session Skills
+# AI Lingo + Session Skills
 
 **Three powerful skills for AI-assisted thinking and session orchestration.**
 
@@ -10,7 +10,7 @@ npx skills add sunnypatneedi/skills
 
 ---
 
-## 🧠 Cognitive Modes
+## 🧠 AI Lingo
 
 **Transform how Claude thinks by using mode-switch words.**
 
@@ -132,7 +132,7 @@ Capture **what skills triggered, what decisions were made, and why** — at 95% 
 
 | Skill | Purpose | How to Use |
 |-------|---------|------------|
-| **cognitive-modes** | Activate specialized thinking modes | Use trigger words: "rigorous", "reimagine", "probabilities", etc. |
+| **ai-lingo** | Activate specialized thinking modes | Use trigger words: "rigorous", "reimagine", "probabilities", etc. |
 | **showcase-export** | Capture orchestration in new sessions | Add `--showcase` flag when starting |
 | **session-reconstruct** | Analyze old sessions retroactively | Add `--reconstruct` flag to exports |
 
@@ -140,7 +140,7 @@ Capture **what skills triggered, what decisions were made, and why** — at 95% 
 
 ## Use Cases
 
-**Cognitive Modes:**
+**AI Lingo:**
 - Strategic thinking for startup decisions
 - Technical architecture discussions
 - Code review requiring taste and rigor
@@ -236,7 +236,7 @@ Confidence: 70%
 
 </details>
 
-### Cognitive Modes Deep Dive
+### AI Lingo Deep Dive
 
 <details>
 <summary>Click to expand full cognitive modes reference</summary>
@@ -295,7 +295,7 @@ Confidence: 70%
 
 ## Comparison Table
 
-| Scenario | Use cognitive-modes | Use showcase | Use reconstruct |
+| Scenario | Use ai-lingo | Use showcase | Use reconstruct |
 |----------|---------------------|--------------|-----------------|
 | Strategic startup decision | ✅ "Let's think **rigorously**" | ❌ | ❌ |
 | Building demo for YC | ✅ "Make this **elegant**" | ✅ `--showcase` | ❌ |

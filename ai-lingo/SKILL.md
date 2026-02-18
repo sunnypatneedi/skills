@@ -1,5 +1,5 @@
 ---
-name: cognitive-modes
+name: ai-lingo
 description: >
   Meta-skill that maps cognitive mode-switch words to appropriate thinking behaviors and skills.
 

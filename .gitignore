@@ -9,7 +9,7 @@
 # Explicitly include curated skills for sharing
 !session-reconstruct/
 !showcase-export/
-!cognitive-modes/
+!ai-lingo/
 
 # Track all files within these directories
 !*/
