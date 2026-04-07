@@ -1,6 +1,6 @@
 # AI Lingo + Session Skills
 
-**Three powerful skills for AI-assisted thinking and session orchestration.**
+**Five powerful skills for AI-assisted thinking, session orchestration, and project hygiene.**
 
 ## Installation
 
@@ -128,6 +128,56 @@ Capture **what skills triggered, what decisions were made, and why** — at 95% 
 
 ---
 
+## 🗺️ Project Hygiene Skills
+
+### 4n1d — Roadmap Triage
+
+**Keep your roadmap honest with a 5-file framework: NOW / NEXT / NOT-YET / NEVER / DONE.**
+
+Run at session end, after shipping, or whenever the roadmap feels stale. Scans the conversation, checks anti-patterns (NOW >4 items, stale triggers, zombie ideas), and proposes promotions, demotions, and archives across all five files.
+
+**Usage:**
+```bash
+/4n1d
+"update roadmap"
+"what should go in NOW?"
+"session wrap-up"
+```
+
+**What it checks:**
+- Items completed but not in DONE.md
+- NEXT triggers that have actually fired
+- NOT-YET ideas that have gone stale (>90 days)
+- NOW items older than 14/30 days
+- Missing `[learn]` items in NOW (executing without validating)
+
+If your project has no `docs/roadmap/` yet, the skill offers to bootstrap one.
+
+### claudemd-improve — CLAUDE.md Audit & Maintenance
+
+**Audit, clean, and enrich the highest-leverage file in your repo.**
+
+`CLAUDE.md` shapes every AI agent session. This skill detects stale rules, contradictions, missing pitfalls, dead file references, and bloat — then fixes them.
+
+**Usage:**
+```bash
+"audit my CLAUDE.md"
+"my CLAUDE.md is outdated"
+"trim CLAUDE.md"
+"enrich CLAUDE.md with what we learned"
+"quick audit"
+```
+
+**Modes:**
+- **Full audit** — staleness, contradictions, completeness, bloat, reference integrity (~5 min)
+- **Quick audit** — top 3 problems + score (~1 min)
+- **Enrich** — pull recent git log into CLAUDE.md additions
+- **Trim** — find what to move into reference docs
+
+> Operates on `CLAUDE.md` only. If you also keep an `AGENTS.md`, run a separate audit for it.
+
+---
+
 ## Skills Included
 
 | Skill | Purpose | How to Use |
@@ -135,6 +185,8 @@ Capture **what skills triggered, what decisions were made, and why** — at 95% 
 | **ai-lingo** | Activate specialized thinking modes | Use trigger words: "rigorous", "reimagine", "probabilities", etc. |
 | **showcase-export** | Capture orchestration in new sessions | Add `--showcase` flag when starting |
 | **session-reconstruct** | Analyze old sessions retroactively | Add `--reconstruct` flag to exports |
+| **4n1d** | Roadmap triage across NOW/NEXT/NOT-YET/NEVER/DONE | `/4n1d` or "update roadmap" |
+| **claudemd-improve** | Audit and improve CLAUDE.md | "audit my CLAUDE.md" |
 
 ---
 
@@ -152,6 +204,12 @@ Capture **what skills triggered, what decisions were made, and why** — at 95% 
 - Investor demos (technical depth + decision-making)
 - Team knowledge sharing (how complex sessions work)
 - Learning (understand AI agent coordination)
+
+**Project Hygiene:**
+- End-of-session roadmap triage (4n1d)
+- Onboarding new contributors via a clean CLAUDE.md
+- Catching dead doc references before they confuse agents
+- Keeping the highest-leverage instruction file accurate
 
 ---
 
