@@ -1,9 +1,9 @@
 ---
-name: claude-config-audit
+name: setup-audit
 description: Measure then prune a Claude Code harness — MCP servers, hooks, plugins, skill descriptions, instruction files, auto-loaded memory. Evidence before cuts. Use on "session starts slow", "prune my MCP servers", "too much context loads before I type", or harness/config cleanup — not CLAUDE.md wording alone (see claudemd-improve).
 ---
 
-# Claude Config Audit
+# Setup Audit
 
 Measure first. The measurement can **veto any cut proposed below** — if evidence contradicts a
 prescription here, follow the evidence and say so explicitly in the report.

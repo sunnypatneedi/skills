@@ -187,7 +187,7 @@ If your project has no `docs/roadmap/` yet, the skill offers to bootstrap one.
 | **session-reconstruct** | Analyze old sessions retroactively | Add `--reconstruct` flag to exports |
 | **4n1d** | Roadmap triage across NOW/NEXT/NOT-YET/NEVER/DONE | `/4n1d` or "update roadmap" |
 | **claudemd-improve** | Audit and improve CLAUDE.md | "audit my CLAUDE.md" |
-| **claude-config-audit** | Measure and prune a slow/bloated harness | "why is my session slow", "prune my MCP servers" |
+| **setup-audit** | Measure and prune a slow/bloated harness | "why is my session slow", "prune my MCP servers" |
 
 ---
 
@@ -364,7 +364,7 @@ Confidence: 70%
 
 ---
 
-## ⏱️ Claude Config Audit
+## ⏱️ Setup Audit
 
 **Your session is slow. Find out which file is responsible — by measuring, not guessing.**
 

@@ -10,7 +10,7 @@
 !session-reconstruct/
 !showcase-export/
 !ai-lingo/
-!claude-config-audit/
+!setup-audit/
 
 # Track all files within these directories
 !*/
