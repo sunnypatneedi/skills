@@ -10,6 +10,7 @@
 !session-reconstruct/
 !showcase-export/
 !ai-lingo/
+!setup-audit/
 
 # Track all files within these directories
 !*/
