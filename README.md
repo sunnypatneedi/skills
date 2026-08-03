@@ -1,6 +1,6 @@
 # AI Lingo + Session Skills
 
-**Five powerful skills for AI-assisted thinking, session orchestration, and project hygiene.**
+**Six powerful skills for AI-assisted thinking, session orchestration, and project hygiene.**
 
 ## Installation
 
@@ -187,6 +187,7 @@ If your project has no `docs/roadmap/` yet, the skill offers to bootstrap one.
 | **session-reconstruct** | Analyze old sessions retroactively | Add `--reconstruct` flag to exports |
 | **4n1d** | Roadmap triage across NOW/NEXT/NOT-YET/NEVER/DONE | `/4n1d` or "update roadmap" |
 | **claudemd-improve** | Audit and improve CLAUDE.md | "audit my CLAUDE.md" |
+| **claude-config-audit** | Measure and prune a slow/bloated harness | "why is my session slow", "prune my MCP servers" |
 
 ---
 
@@ -360,6 +361,61 @@ Confidence: 70%
 | Review old work session | ❌ | ❌ | ✅ `--reconstruct` |
 | Architecture tradeoffs | ✅ "What's the **binding constraint**?" | ✅ `--showcase` | ❌ |
 | Quick prototype | ❌ (unless you want quality) | ❌ | ❌ |
+
+---
+
+## ⏱️ Claude Config Audit
+
+**Your session is slow. Find out which file is responsible — by measuring, not guessing.**
+
+Six surfaces load before you type a word, and they charge on four different meters. The one people
+usually blame — MCP servers at startup — is often the cheapest. A 40 ms hook firing on every tool
+call outweighs two seconds of startup by an order of magnitude.
+
+### Quick Start
+
+```bash
+"why is my session slow"
+"prune my MCP servers"
+"too much context loads before I type"
+```
+
+### What it measures
+
+| Meter | Paid | Where it usually hides |
+|-------|------|------------------------|
+| Startup | Once per session | `stdio` MCP servers spawned via `npx`/`uvx` |
+| Per tool call | Every Bash/Edit/Read | Hooks in `settings.json` — ×100–200 per session |
+| Per session | Every hook trigger | A `git fetch` or `curl` inside a per-call hook |
+| Context | Every single turn | Skill descriptions, the CLAUDE.md chain, MCP tool schemas |
+
+### The workflow
+
+Seven phases, in an order where each one exists to stop a specific way the previous one goes wrong:
+discover and snapshot → measure all four meters → inventory with real usage evidence → propose
+**keep / kill / rewrite / defer** → adversarial gate → apply and verify by replaying your real
+command history → record a ledger with re-add criteria for every cut.
+
+### Three rules it enforces
+
+- **Measure before you prescribe** — and let the measurement overrule the plan. The suspected cause
+  frequently measures zero.
+- **Rewrite, don't delete, anything protective.** A guard that costs too much is a guard with a bug.
+  Fix the cost and keep the defence.
+- **Grep the name before you remove the thing.** Anything documented as a remedy fails *silently*
+  when deleted — no error, just an instruction nobody can follow.
+
+### Included scripts
+
+| Script | Does |
+|--------|------|
+| `measure-startup.sh` | Interleaved startup timing against an isolation floor — the only cross-batch-comparable number |
+| `context-inventory.py` | Tokens auto-loaded before your first message, by surface; flags a silently-truncated memory index |
+| `usage-evidence.py` | Real MCP/tool call counts from your transcripts — turns per-call cost into per-session cost |
+
+> **Note on the numbers.** The worked examples come from one real audit of one machine. They are
+> labelled as observations, not laws — a setup with three `npx` MCP servers and no hooks inverts the
+> ranking entirely. The skill tells you to measure before cutting for exactly this reason.
 
 ---
 
